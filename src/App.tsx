@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import MSlide from './components/MSlide/MSlide';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <MSlide
+                items={SLIDES}
+                cycle={true}
+                hideControls={true}
+                automatic={true}
+                interval={3000}
+            />
+        </div>
+    );
 }
 
 export default App;
+
+const SLIDES = [
+    {
+        id: 'slide1',
+        text: 'Slide 1',
+    },
+    {
+        id: 'slide2',
+        text: 'Slide 2',
+    },
+    {
+        id: 'slide3',
+        text: 'Slide 3',
+    },
+];
