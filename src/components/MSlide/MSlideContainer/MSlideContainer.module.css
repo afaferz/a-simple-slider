@@ -1,0 +1,43 @@
+.container {
+    box-sizing: border-box;
+    height: clamp(650px, 55vh, 80%);
+    left: 50%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    position: absolute;
+    overflow: hidden;
+    transform: translate3d(-50%, -50%, 0);
+    top: 50%;
+    width: clamp(80%, 80vw, 80%);
+}
+
+.content {
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.item {
+    max-width: 100%;
+}
+
+.nav {
+    display: flex;
+    left: 50%;
+    margin: 1rem auto;
+    max-width: 90%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+}
+
+.nav>button {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 1.5rem;
+    width: 150px;
+}

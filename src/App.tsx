@@ -1,21 +1,36 @@
-import MSlide from './components/MSlide/MSlide';
+import { MSlideContainer, MSlideItem } from './components/MSlide/MSlide';
+import { generateRandomColor } from './helpers/RandomColor';
 import './App.css';
 
 function App() {
     return (
         <div className="App">
-            <MSlide
-                items={SLIDES}
+            <MSlideContainer
                 cycle={true}
-                hideControls={true}
+                hideControl={true}
                 automatic={true}
-                interval={3000}
-            />
+                interval={1500}
+            >
+                {SLIDES.map((slide, index) => (
+                    <MSlideItem id={slide.id}>
+                        <div style={{ ...itemStyle() }}>{index + 1}</div>
+                    </MSlideItem>
+                ))}
+            </MSlideContainer>
         </div>
     );
 }
 
 export default App;
+
+const itemStyle = () => ({
+    backgroundColor: generateRandomColor(),
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+});
 
 const SLIDES = [
     {

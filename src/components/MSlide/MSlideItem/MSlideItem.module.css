@@ -1,0 +1,14 @@
+.item {
+    align-items: center;
+    background-color: #eee;
+    border-radius: 4px;
+    box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-shrink: 0;
+    font-size: 3.5rem;
+    justify-content: center;
+    margin: 0 5%;
+    max-width: 90%;
+    text-align: center;
+    width: 100%;
+}
